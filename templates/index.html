@@ -67,10 +67,10 @@
       <!--Gif-->
       <p style="text-align: center;"><img src="https://media.tenor.com/images/1274f2ea9ede2123edc8e8c169fc8104/tenor.gif" alt="COVID-19 Vaccine Finder" width="85"/></p>
       <!--Inputs-->
-      <form class="form-main" action="result" method="post">
+      <form class="form-main" action="{{ url_for('search')}}" method="post">
         <input type="text" name="pincode" id="pincode" placeholder="PIN: XXXXXX" required="required">
         <input type="text" name="date" id="date" placeholder="DATE: DD-MM-YYYY" required="required">
-        <button href="templates/result.html" id="submit" type="submit">Search</button><br>
+        <button href="/search" id="submit" type="submit">Search</button><br>
       </form><br>
       <!--Instructions-->
       <section class="guide">

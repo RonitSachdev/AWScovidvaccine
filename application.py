@@ -18,7 +18,7 @@ def search():
     if request.method == 'POST':
         pincode = request.form["pincode"]
         date = request.form["date"]
-        url = f"https://cdn-api.co-vin.in/api/v2/applicationointment/sessions/public/findByPin?pincode={pincode}&date={date}"
+        url = f"https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByPin?pincode={pincode}&date={date}"
         response = requests.get(url).json()
         build_direction = "TOP_TO_BOTTOM"
         table_attributes = {"style": "width:50%"}
